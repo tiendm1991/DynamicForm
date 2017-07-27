@@ -1,8 +1,8 @@
 import { Injectable }       from '@angular/core';
 
-import { DropdownQuestion } from './question-dropdown';
+import { QuestionDropdown } from './question-dropdown';
 import { QuestionBase }     from './question-base';
-import { TextboxQuestion }  from './question-textbox';
+import { QuestionTextbox }  from './question-textbox';
 
 @Injectable()
 export class QuestionService {
@@ -13,7 +13,7 @@ export class QuestionService {
 
     let questions: QuestionBase<any>[] = [
 
-      new DropdownQuestion({
+      new QuestionDropdown({
         key: 'brave',
         label: 'Bravery Rating',
         options: [
@@ -25,7 +25,7 @@ export class QuestionService {
         order: 3
       }),
 
-      new TextboxQuestion({
+      new QuestionTextbox({
         key: 'firstName',
         label: 'First name',
         value: 'Bombasto',
@@ -33,7 +33,7 @@ export class QuestionService {
         order: 1
       }),
 
-      new TextboxQuestion({
+      new QuestionTextbox({
         key: 'emailAddress',
         label: 'Email',
         type: 'email',
